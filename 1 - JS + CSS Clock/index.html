@@ -55,7 +55,6 @@
 
     .hand {
         width: 50%;
-        height: 6px;
         background: black;
         position: absolute;
         top: 50%;
@@ -70,6 +69,10 @@
     const secondHand = document.querySelector('.second-hand');
     const minHand = document.querySelector('.min-hand');
     const hourHand = document.querySelector('.hour-hand');
+
+    secondHand.style.height = "3px";
+    minHand.style.height = "6px";
+    hourHand.style.height = "9px";
 
     setInterval(() => {
         const now = new Date();
