@@ -64,6 +64,19 @@
 </style>
 
 <script>
+    function update() {
+        const suffix = this.dataset.sizing || '';
+        document
+            .documentElement.style
+            .setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    document
+        .querySelectorAll('.controls input')
+        .forEach(input => {
+            input.addEventListener('change', update);
+            input.addEventListener('mousemove', update);
+        });
 
 </script>
 
